@@ -1,0 +1,77 @@
+body {
+    background-color: grey;
+}
+
+.full-screen-ios {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.full-screen-instructions-hand {
+    width: 114px;
+    height: 112px;
+    top: 50vh;
+    left: 50vw;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    animation-name: fullscreen-swipe;
+    animation-timing-function: ease-out;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    z-index: 1000;
+}
+
+.full-screen-instructions-line {
+    border-radius: 3px;
+    width: 20px;
+    height: 17vh;
+    top: 40vh;
+    position: relative;
+    transform: translate(-50%, -50%);
+    animation-name: lineYAnimation;
+    animation-timing-function: ease-out;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.lineRect {
+    animation-name: lineHeightAnimation;
+    animation-timing-function: ease-out;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fullscreen-swipe {
+    from {
+        top: 70vh;
+    }
+
+    to {
+        top: 50vh;
+    }
+}
+
+@keyframes lineHeightAnimation {
+    from {
+        height: 1px;
+    }
+
+    to {
+        height: 17vh;
+    }
+}
+
+
+@keyframes lineYAnimation {
+    from {
+        top: 70vh;
+    }
+
+    to {
+        top: 53vh;
+    }
+}
